@@ -15,8 +15,8 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 #### Endpoint
 
-- **URL:** `/generate_checkout/{product_uuid}/{user_wallet}/{uid}/{params}`
-- **Method:** `GET`
+- URL: `/generate_checkout/{product_uuid}/{user_wallet}/{uid}/{params}`
+- Method: `GET`
 
 #### Parameters
 
@@ -51,8 +51,8 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 #### Endpoint
 
-- **URL:** `/generate_onboarding/{product_uuid}/{uid}/{params}`
-- **Method:** `GET`
+- URL: `/generate_onboarding/{product_uuid}/{uid}/{params}`
+- Method: `GET`
 
 #### Parameters
 
@@ -85,8 +85,8 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 #### Endpoint
 
-- **URL:** `/generate_checkout_f/{token}/{user_wallet}`
-- **Method:** `GET`
+- URL: `/generate_checkout_f/{token}/{user_wallet}`
+- Method: `GET`
 
 #### Parameters
 
@@ -117,8 +117,8 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 #### Endpoint
 
-- **URL:** `/poll_payment_status/{token}`
-- **Method:** `GET`
+- URL: `/poll_payment_status/{token}`
+- Method: `GET`
 
 #### Parameters
 
@@ -127,52 +127,52 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 #### Response
 
 - **Success Response:**
-  - **Status Code:** 200 OK
-  - **Content:**
+  - Status Code: 200 OK
+  - Content:
     ```json
     {"status": "success", "message": "Payment confirmed."}
     ```
-  - **Description:** The payment was successful, and the user is now subscribed to the product.
+  - Description: The payment was successful, and the user is now subscribed to the product.
 
 - **Insufficient Payment Response:**
-  - **Status Code:** 200 OK
-  - **Content:**
+  - Status Code: 200 OK
+  - Content:
     ```json
     {"status": "unpaid", "message": "Unpaid. The product cost is X USDT, but only Y USDT was sent, please resend exactly X"}
     ```
-  - **Description:** The payment amount is not sufficient; the user needs to resend the exact amount.
+  - Description: The payment amount is not sufficient; the user needs to resend the exact amount.
 
 - **Pending Payment Response:**
-  - **Status Code:** 200 OK
-  - **Content:**
+  - Status Code: 200 OK
+  - Content:
     ```json
     {"status": "pending", "message": "Payment is pending. Please wait."}
     ```
-  - **Description:** The payment is still pending; the user should wait for confirmation.
+  - Description: The payment is still pending; the user should wait for confirmation.
 
 - **Invalid Token Response:**
-  - **Status Code:** 404 Not Found
-  - **Content:**
+  - Status Code: 404 Not Found
+  - Content:
     ```json
     {"status": "error", "message": "Bad value"}
     ```
-  - **Description:** The provided token is invalid or cannot be decoded.
+  - Description: The provided token is invalid or cannot be decoded.
 
 - **Product Not Found Response:**
-  - **Status Code:** 404 Not Found
-  - **Content:**
+  - Status Code: 404 Not Found
+  - Content:
     ```json
     {"status": "error", "message": "Product not found"}
     ```
-  - **Description:** The product associated with the provided token was not found.
+  - Description: The product associated with the provided token was not found.
 
 - **No Incoming Transactions Response:**
-  - **Status Code:** 200 OK
-  - **Content:**
+  - Status Code: 200 OK
+  - Content:
     ```json
     {"status": "unsent", "message": "No incoming transactions found. Please send payment."}
     ```
-  - **Description:** No incoming transactions were found for the user; they need to initiate the payment.
+  - Description: No incoming transactions were found for the user; they need to initiate the payment.
 
 ### Rate Limiting
 
