@@ -15,10 +15,10 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 #### Endpoint
 
-- URL: ```/generate_checkout/{product_uuid}/{user_wallet}/{uid}/{params}```
+- URL: `/generate_checkout`
 - Method: `GET`
 
-#### Parameters
+#### Parameters (url path)
 
 - `product_uuid` (UUID): The UUID of the product for which the checkout is being generated.
 - `user_wallet` (string): The user's crypto wallet address.
@@ -51,10 +51,10 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 #### Endpoint
 
-- URL: `/generate_onboarding/{product_uuid}/{uid}/{params}`
+- URL: `/generate_onboarding`
 - Method: `GET`
 
-#### Parameters
+#### Parameters (url path)
 
 - `product_uuid` (UUID): The UUID of the product for which onboarding is being generated.
 - `uid` (string): The unique identifier of the user.
@@ -88,7 +88,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 - URL: `/generate_checkout_f/{token}/{user_wallet}`
 - Method: `GET`
 
-#### Parameters
+#### Parameters (url path)
 
 - `token` (string): The checkout token generated in the previous step.
 - `user_wallet` (string): The user's crypto wallet address.
@@ -120,7 +120,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 - URL: `/poll_payment_status/{token}`
 - Method: `GET`
 
-#### Parameters
+#### Parameters (url path)
 
 - `token` (string): The checkout token generated in the previous step.
 
