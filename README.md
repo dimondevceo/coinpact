@@ -42,11 +42,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
   - Status: 200 OK
   - JSON:
 ```
-{
-  "status": "success",
-  "checkout_token": "token123",
-  "checkout_url": "https://coinpact.ch/api/checkout/token123"
-}
+{ "status": "success", "checkout_token": "token123", "checkout_url": "https://coinpact.ch/api/checkout/token123" }
 ```
 - **Error:**
   - Status: 404 Not Found
@@ -69,7 +65,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 #### Example
 
-```json
+```
 {
   "product_uuid": "123e4567-e89b-12d3-a456-426614174001",
   "uid": "user123",
@@ -83,11 +79,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
   - Status: 200 OK
   - JSON:
 ```
-{
-  "status": "success",
-  "onboarding_token": "token456",
-  "onboarding_url": "https://coinpact.ch/api/onboarding/token456"
-}
+{ "status": "success", "onboarding_token": "token456", "onboarding_url": "https://coinpact.ch/api/onboarding/token456" }
 ```
 - **Error:**
   - Status: 404 Not Found
@@ -122,11 +114,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
   - Status: 200 OK
   - JSON:
 ```
-{
-  "status": "success",
-  "checkout_token": "token789",
-  "checkout_url": "https://coinpact.ch/api/checkout/token789"
-}
+{ "status": "success", "checkout_token": "token789", "checkout_url": "https://coinpact.ch/api/checkout/token789" }
 ```
 - **Error:**
   - Status: 404 Not Found
@@ -151,7 +139,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
   - Status Code: 200 OK
   - Content:
     ```
-    {"status": "success", "message": "Payment confirmed."}
+    { "status": "success", "message": "Payment confirmed." }
     ```
   - Description: The payment was successful, and the user is now subscribed to the product.
 
@@ -159,7 +147,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
   - Status Code: 200 OK
   - Content:
     ```
-    {"status": "unpaid", "message": "Unpaid. The product cost is X USDT, but only Y USDT was sent, please resend exactly X"}
+    { "status": "unpaid", "message": "Unpaid. The product cost is X USDT, but only Y USDT was sent, please resend exactly X" }
     ```
   - Description: The payment amount is not sufficient; the user needs to resend the exact amount.
 
@@ -167,7 +155,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
   - Status Code: 200 OK
   - Content:
     ```
-    {"status": "pending", "message": "Payment is pending. Please wait."}
+    { "status": "pending", "message": "Payment is pending. Please wait." }
     ```
   - Description: The payment is still pending; the user should wait for confirmation.
 
@@ -175,7 +163,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
   - Status Code: 404 Not Found
   - Content:
     ```
-    {"status": "error", "message": "Bad value"}
+    { "status": "error", "message": "Bad value" }
     ```
   - Description: The provided token is invalid or cannot be decoded.
 
@@ -183,7 +171,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
   - Status Code: 404 Not Found
   - Content:
     ```
-    {"status": "error", "message": "Product not found"}
+    { "status": "error", "message": "Product not found" }
     ```
   - Description: The product associated with the provided token was not found.
 
@@ -191,7 +179,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
   - Status Code: 200 OK
   - Content:
     ```
-    {"status": "unsent", "message": "No incoming transactions found. Please send payment."}
+    { "status": "unsent", "message": "No incoming transactions found. Please send payment." }
     ```
   - Description: No incoming transactions were found for the user; they need to initiate the payment.
 
