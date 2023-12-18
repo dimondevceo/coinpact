@@ -1,4 +1,4 @@
-# CoinPact REST API Documentation
+# CoinPact REST API Docs
 ![https://github.com/dimondevceo/coinpact/blob/main/banner.png](https://raw.githubusercontent.com/dimondevceo/coinpact/main/banner.png)
 
 ## Overview
