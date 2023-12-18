@@ -40,10 +40,13 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 - **Success:**
   - Status: 200 OK
-  - JSON:
-    ```
-      { "status": "success", "checkout_token": "token123", "checkout_url": "https://coinpact.ch/api/checkout/token123" }
-    ```
+  - JSON: ```
+{
+  "status": "success",
+  "checkout_token": "token123",
+  "checkout_url": "https://coinpact.ch/api/checkout/token123"
+}
+        ```
 - **Error:**
   - Status: 404 Not Found
   - JSON: `{"status": "error", "message": "Error message"}`
