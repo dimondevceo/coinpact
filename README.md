@@ -129,7 +129,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 - **Success Response:**
   - Status Code: 200 OK
   - Content:
-    ```json
+    ```
     {"status": "success", "message": "Payment confirmed."}
     ```
   - Description: The payment was successful, and the user is now subscribed to the product.
@@ -137,7 +137,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 - **Insufficient Payment Response:**
   - Status Code: 200 OK
   - Content:
-    ```json
+    ```
     {"status": "unpaid", "message": "Unpaid. The product cost is X USDT, but only Y USDT was sent, please resend exactly X"}
     ```
   - Description: The payment amount is not sufficient; the user needs to resend the exact amount.
@@ -145,7 +145,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 - **Pending Payment Response:**
   - Status Code: 200 OK
   - Content:
-    ```json
+    ```
     {"status": "pending", "message": "Payment is pending. Please wait."}
     ```
   - Description: The payment is still pending; the user should wait for confirmation.
@@ -153,7 +153,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 - **Invalid Token Response:**
   - Status Code: 404 Not Found
   - Content:
-    ```json
+    ```
     {"status": "error", "message": "Bad value"}
     ```
   - Description: The provided token is invalid or cannot be decoded.
@@ -161,7 +161,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 - **Product Not Found Response:**
   - Status Code: 404 Not Found
   - Content:
-    ```json
+    ```
     {"status": "error", "message": "Product not found"}
     ```
   - Description: The product associated with the provided token was not found.
@@ -169,7 +169,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 - **No Incoming Transactions Response:**
   - Status Code: 200 OK
   - Content:
-    ```json
+    ```
     {"status": "unsent", "message": "No incoming transactions found. Please send payment."}
     ```
   - Description: No incoming transactions were found for the user; they need to initiate the payment.
@@ -181,8 +181,11 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 #### Example
 
-```json
-{"status": "ratelimit", "message": "Too many requests, please try again in 30 seconds."}
+```
+{
+  "status": "ratelimit",
+  "message": "Too many requests, please try again in 30 seconds."
+}
 ```
 
 ## Future Updates
