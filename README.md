@@ -185,6 +185,15 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 {"status": "ratelimit", "message": "Too many requests, please try again in 30 seconds."}
 ```
 
-## Conclusion
+## Future Updates
 
-These are the endpoints available in the CoinPact API. Use them to seamlessly integrate CoinPact into your application and provide a user-friendly crypto payment experience. If you have any questions or encounter issues, please refer to this documentation or contact our support team at support@coinpact.com.
+- [x] Add Payment Status endpoint
+- [ ] Add inline and modal checkouts
+- [ ] Add custom callbacks
+- [ ] Create Paylink service
+- [ ] Add url shortening to onboarding and checkout
+- [ ] Add Litecoin support
+- [ ] Add Solana support
+- [ ] Add Dash support
+- [ ] Add XRP support
+- [ ] Add Monero support
