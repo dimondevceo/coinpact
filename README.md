@@ -20,9 +20,9 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 #### Parameters (url path)
 
-- `product_uuid` (UUID): The UUID of the product for which the checkout is being generated.
+- `product_uuid` (UUID): The UUID of the product for which the checkout is being generated (get it in dashboard > products).
 - `user_wallet` (string): The user's crypto wallet address.
-- `uid` (string): The unique identifier of the user.
+- `uid` (string): The unique external identifier of the user (eg. Telegram ID, User ID in your database).
 - `params` (JSON): Additional parameters for checkout configuration.
 
 #### Example
@@ -40,13 +40,10 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 - **Success:**
   - Status: 200 OK
-  - JSON: ```
-{
-  "status": "success",
-  "checkout_token": "token123",
-  "checkout_url": "https://coinpact.ch/api/checkout/token123"
-}
-        ```
+  - JSON:
+    ```
+    { "status": "success", "checkout_token": "token123", "checkout_url": "https://coinpact.ch/api/checkout/token123" }
+    ```
 - **Error:**
   - Status: 404 Not Found
   - JSON: `{"status": "error", "message": "Error message"}`
@@ -62,8 +59,8 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 #### Parameters (url path)
 
-- `product_uuid` (UUID): The UUID of the product for which onboarding is being generated.
-- `uid` (string): The unique identifier of the user.
+- `product_uuid` (UUID): The UUID of the product for which onboarding is being generated (get it in dashboard > products).
+- `uid` (string): The unique identifier of the user (eg. Telegram ID, User ID in your database).
 - `params` (JSON): Additional parameters for onboarding configuration.
 
 #### Example
