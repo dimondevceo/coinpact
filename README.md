@@ -27,7 +27,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 #### Example
 
-```json
+```
 {
   "product_uuid": "123e4567-e89b-12d3-a456-426614174001",
   "user_wallet": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa",
