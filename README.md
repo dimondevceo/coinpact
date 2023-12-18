@@ -15,7 +15,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 #### Endpoint
 
-- URL: `/generate_checkout/{product_uuid}/{user_wallet}/{uid}/{params}`
+- URL: ```/generate_checkout/{product_uuid}/{user_wallet}/{uid}/{params}```
 - Method: `GET`
 
 #### Parameters
