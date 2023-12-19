@@ -87,7 +87,42 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 ---
 
-### 3. Generate Checkout from Frontend
+### 3. Check User Subscription
+
+#### Endpoint
+
+- URL: `/check_subscription`
+- Method: `GET`
+
+#### Parameters (url path)
+
+- `product_uuid` (UUID): The UUID of the product for which onboarding is being generated (get it in dashboard > products).
+- `uid` (string): The unique identifier of the user (eg. Telegram ID, User ID in your database).
+
+#### Example
+
+```
+{
+  "product_uuid": "123e4567-e89b-12d3-a456-426614174001",
+  "uid": "user123",
+}
+```
+
+#### Response
+
+- **Success:**
+  - Status: 200 OK
+  - JSON:
+    ```
+    { "status": "success", "is_subscriber": true }
+    ```
+- **Error:**
+  - Status: 404 Not Found
+  - JSON: `{"status": "error", "message": "Error message"}`
+
+---
+
+### 4. Generate Checkout from Frontend
 
 #### Endpoint
 
@@ -96,7 +131,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 #### Parameters (url path)
 
-- `token` (string): The checkout token generated in the previous step.
+- `token` (string): The checkout token generated in endpoint 1.
 - `user_wallet` (string): The user's crypto wallet address.
 
 #### Example
@@ -122,7 +157,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 ---
 
-### 4. Poll Payment Status
+### 5. Poll Payment Status
 
 #### Endpoint
 
