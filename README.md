@@ -40,10 +40,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 - **Success:**
   - Status: 200 OK
-  - JSON:
-    ```
-    { "status": "success", "checkout_token": "token123", "checkout_url": "https://coinpact.ch/api/checkout/token123" }
-    ```
+  - JSON: `{ "status": "success", "checkout_token": "token123", "checkout_url": "https://coinpact.ch/api/checkout/token123" }`
 - **Error:**
   - Status: 404 Not Found
   - JSON: `{"status": "error", "message": "Error message"}`
@@ -77,10 +74,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 - **Success:**
   - Status: 200 OK
-  - JSON:
-    ```
-    { "status": "success", "onboarding_token": "token456", "onboarding_url": "https://coinpact.ch/api/onboarding/token456" }
-    ```
+  - JSON: `{ "status": "success", "onboarding_token": "token456", "onboarding_url": "https://coinpact.ch/api/onboarding/token456" }`
 - **Error:**
   - Status: 404 Not Found
   - JSON: `{"status": "error", "message": "Error message"}`
@@ -112,10 +106,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 - **Success:**
   - Status: 200 OK
-  - JSON:
-    ```
-    { "status": "success", "is_subscriber": true }
-    ```
+  - JSON: `{ "status": "success", "is_subscriber": true }`
 - **Error:**
   - Status: 404 Not Found
   - JSON: `{"status": "error", "message": "Error message"}`
@@ -147,10 +138,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 - **Success:**
   - Status: 200 OK
-  - JSON:
-    ```
-    { "status": "success", "checkout_token": "token789", "checkout_url": "https://coinpact.ch/api/checkout/token789" }
-    ```
+  - JSON: `{ "status": "success", "checkout_token": "token789", "checkout_url": "https://coinpact.ch/api/checkout/token789" }`
 - **Error:**
   - Status: 404 Not Found
   - JSON: `{"status": "error", "message": "Error message"}`
@@ -172,50 +160,32 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 - **Success Response:**
   - Status Code: 200 OK
-  - Content:
-    ```
-    { "status": "success", "message": "Payment confirmed." }
-    ```
+  - Content: `{ "status": "success", "message": "Payment confirmed." }`
   - Description: The payment was successful, and the user is now subscribed to the product.
 
 - **Insufficient Payment Response:**
   - Status Code: 200 OK
-  - Content:
-    ```
-    { "status": "unpaid", "message": "Unpaid. The product cost is X USDT, but only Y USDT was sent, please resend exactly X" }
-    ```
+  - Content: `{ "status": "unpaid", "message": "Unpaid. The product cost is X USDT, but only Y USDT was sent, please resend exactly X" }`
   - Description: The payment amount is not sufficient; the user needs to resend the exact amount.
 
 - **Pending Payment Response:**
   - Status Code: 200 OK
-  - Content:
-    ```
-    { "status": "pending", "message": "Payment is pending. Please wait." }
-    ```
+  - Content: `{ "status": "pending", "message": "Payment is pending. Please wait." }`
   - Description: The payment is still pending; the user should wait for confirmation.
 
 - **Invalid Token Response:**
   - Status Code: 404 Not Found
-  - Content:
-    ```
-    { "status": "error", "message": "Bad value" }
-    ```
+  - Content: `{ "status": "error", "message": "Bad value" }`
   - Description: The provided token is invalid or cannot be decoded.
 
 - **Product Not Found Response:**
   - Status Code: 404 Not Found
-  - Content:
-    ```
-    { "status": "error", "message": "Product not found" }
-    ```
+  - Content: `{ "status": "error", "message": "Product not found" }`
   - Description: The product associated with the provided token was not found.
 
 - **No Incoming Transactions Response:**
   - Status Code: 200 OK
-  - Content:
-    ```
-    { "status": "unsent", "message": "No incoming transactions found. Please send payment." }
-    ```
+  - Content: `{ "status": "unsent", "message": "No incoming transactions found. Please send payment." }`
   - Description: No incoming transactions were found for the user; they need to initiate the payment.
 
 ### Rate Limiting
