@@ -106,7 +106,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 - **Success:**
   - Status: 200 OK
-  - JSON: `{ "status": "success", "is_subscriber": true }`
+  - JSON: `{ "status": "success", "is_subscriber": true, "is_paid": true, "subscribed_until": 1704056400,00000 }`
 - **Error:**
   - Status: 404 Not Found
   - JSON: `{"status": "error", "message": "Error message"}`
