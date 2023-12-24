@@ -130,7 +130,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 ```
 {
   "token": "token789",
-  "user_wallet": "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"
+  "user_wallet": "bc1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 }
 ```
 
