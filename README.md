@@ -117,7 +117,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 #### Endpoint
 
-- URL: `/generate_checkout_f/{token}/{user_wallet}`
+- URL: `/generate_checkout_f`
 - Method: `GET`
 
 #### Parameters (url path)
@@ -149,7 +149,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 #### Endpoint
 
-- URL: `/poll_payment_status/{token}`
+- URL: `/poll_payment_status`
 - Method: `GET`
 
 #### Parameters (url path)
