@@ -145,49 +145,6 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 
 ---
 
-### 5. Poll Payment Status
-
-#### Endpoint
-
-- URL: `/poll_payment_status`
-- Method: `GET`
-
-#### Parameters (url path)
-
-- `token` (string): The checkout token generated in the previous step.
-
-#### Response
-
-- **Success Response:**
-  - Status Code: 200 OK
-  - Content: `{ "status": "success", "message": "Payment confirmed." }`
-  - Description: The payment was successful, and the user is now subscribed to the product.
-
-- **Insufficient Payment Response:**
-  - Status Code: 200 OK
-  - Content: `{ "status": "unpaid", "message": "Unpaid. The product cost is X USDT, but only Y USDT was sent, please resend exactly X" }`
-  - Description: The payment amount is not sufficient; the user needs to resend the exact amount.
-
-- **Pending Payment Response:**
-  - Status Code: 200 OK
-  - Content: `{ "status": "pending", "message": "Payment is pending. Please wait." }`
-  - Description: The payment is still pending; the user should wait for confirmation.
-
-- **Invalid Token Response:**
-  - Status Code: 404 Not Found
-  - Content: `{ "status": "error", "message": "Bad value" }`
-  - Description: The provided token is invalid or cannot be decoded.
-
-- **Product Not Found Response:**
-  - Status Code: 404 Not Found
-  - Content: `{ "status": "error", "message": "Product not found" }`
-  - Description: The product associated with the provided token was not found.
-
-- **No Incoming Transactions Response:**
-  - Status Code: 200 OK
-  - Content: `{ "status": "unsent", "message": "No incoming transactions found. Please send payment." }`
-  - Description: No incoming transactions were found for the user; they need to initiate the payment.
-
 ### Rate Limiting
 
 - Rate limiting is enforced to prevent abuse and server overloading.
