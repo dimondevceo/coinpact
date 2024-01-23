@@ -148,7 +148,7 @@ The base URL for all API endpoints is: `https://coinpact.ch/api`
 ### Rate Limiting
 
 - Rate limiting is enforced to prevent abuse and server overloading.
-- Requests are limited to 2 per minute per IP address.
+- Requests are limited to 1 per second per IP address.
 
 #### Example
 
